@@ -3,8 +3,8 @@ class Grappa < Formula
 
   desc "AI-augmented Telegram client"
   homepage "https://github.com/hmepas/grappa"
-  url "https://github.com/hmepas/grappa/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "7a5b43e15ea27d0a73213ea12d88d4be49c184966a8b47420d237019e484210d"
+  url "https://github.com/hmepas/grappa/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "03d4c2c7a17812987d03aba1a1e8a08f417140439602dc3bad7ba03785096a09"
 
   head "https://github.com/hmepas/grappa.git", branch: "main"
 
