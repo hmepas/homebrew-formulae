@@ -3,8 +3,8 @@ class Grappa < Formula
 
   desc "AI-augmented Telegram client"
   homepage "https://github.com/hmepas/grappa"
-  url "https://github.com/hmepas/grappa/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "03d4c2c7a17812987d03aba1a1e8a08f417140439602dc3bad7ba03785096a09"
+  url "https://github.com/hmepas/grappa/archive/refs/tags/v0.1.3.tar.gz"
+  sha256 "abd95f306752ca57b5950623a648ac9e61f2c41979f9ceb0cd78f840ac349d22"
 
   head "https://github.com/hmepas/grappa.git", branch: "main"
 
@@ -19,14 +19,10 @@ class Grappa < Formula
 
   def caveats
     <<~EOS
-      grappa needs Telegram API credentials, provided via environment variables
-      or a .env file in the directory you run it from:
-
-        TELEGRAM_API_ID=...
-        TELEGRAM_API_HASH=...
-        TELEGRAM_PHONE_NUMBER=...   # optional
-
-      Get credentials at https://my.telegram.org/apps.
+      grappa needs Telegram API credentials (https://my.telegram.org/apps).
+      On first run it will ask for them and save the answers to
+      ~/.config/grappa/config.env. Environment variables and a ./.env file
+      in the working directory take priority over the global config.
 
       Session and cache files are created relative to the current working
       directory (sessions/, data/, downloads/), so run grappa from a
