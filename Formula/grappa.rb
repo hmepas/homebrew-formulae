@@ -4,8 +4,7 @@ class Grappa < Formula
   desc "AI-augmented Telegram client"
   homepage "https://github.com/hmepas/grappa"
   url "https://github.com/hmepas/grappa/archive/refs/tags/v0.1.0.tar.gz"
-  # Placeholder until the v0.1.0 tag is pushed; regenerate with scripts/update-formula.sh
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256 "7a5b43e15ea27d0a73213ea12d88d4be49c184966a8b47420d237019e484210d"
 
   head "https://github.com/hmepas/grappa.git", branch: "main"
 
