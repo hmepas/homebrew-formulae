@@ -3,8 +3,8 @@ class Grappa < Formula
 
   desc "Telegram client CLI"
   homepage "https://github.com/hmepas/grappa"
-  url "https://github.com/hmepas/grappa/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "01f45483b05cb368e6e44cc39c674817d7930132054b002e9e4041d4fd117909"
+  url "https://github.com/hmepas/grappa/archive/refs/tags/v0.2.1.tar.gz"
+  sha256 "8633a39b08290ebec472f5032e3a0a0e7ae94108511548043da219801f12efff"
 
   head "https://github.com/hmepas/grappa.git", branch: "main"
 
