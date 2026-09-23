@@ -10,6 +10,7 @@ Personal [Homebrew](https://brew.sh) tap for [hmepas](https://github.com/hmepas)
 ```bash
 brew tap hmepas/formulae
 brew install grappa
+brew install obi && brew services start obi
 ```
 
 Or install the latest development version straight from `main`:
@@ -18,15 +19,17 @@ Or install the latest development version straight from `main`:
 brew install --HEAD hmepas/formulae/grappa
 ```
 
-## Test a formula locally (without tapping)
+## Test a formula locally
+
+Homebrew only installs formulae from a tap, so push first, then:
 
 ```bash
-brew install --formula ./Formula/grappa.rb
+brew update && brew install hmepas/formulae/obi
 ```
 
-## Releasing a new grappa version
+## Releasing a new version
 
-1. In the `grappa` repo: bump `version` in `pyproject.toml`, then tag and push:
+1. In the project repo (bump `version` in `pyproject.toml` for grappa), tag and push:
 
    ```bash
    git tag v0.2.0 && git push origin v0.2.0
@@ -35,7 +38,7 @@ brew install --formula ./Formula/grappa.rb
 2. In this repo, update the formula and commit:
 
    ```bash
-   scripts/update-formula.sh 0.2.0
+   scripts/update-formula.sh grappa 0.2.0
    git commit -am "grappa 0.2.0"
    git push
    ```
@@ -45,3 +48,4 @@ brew install --formula ./Formula/grappa.rb
 | Formula | Description |
 |---------|-------------|
 | `grappa` | Telegram cli |
+| `obi` | Native macOS status bar for yabai |
