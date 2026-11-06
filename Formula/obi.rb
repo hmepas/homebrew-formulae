@@ -1,8 +1,8 @@
 class Obi < Formula
   desc "Native macOS status bar for yabai"
   homepage "https://github.com/hmepas/obi"
-  url "https://github.com/hmepas/obi/archive/refs/tags/v0.1.5.tar.gz"
-  sha256 "b84135b507ee52684190a1b99109c1474890fb953309cb50d999df3cfe191d9e"
+  url "https://github.com/hmepas/obi/archive/refs/tags/v0.1.6.tar.gz"
+  sha256 "91108810374d40b39fcbafee0e41bb686ba172382565ac701a7c18f36331351a"
 
   head "https://github.com/hmepas/obi.git", branch: "main"
 
@@ -11,11 +11,14 @@ class Obi < Formula
 
   def install
     system "swift", "build", "--disable-sandbox", "-c", "release"
-    bin.install ".build/release/obi"
+    # Location access (needed for the Wi-Fi name) is only granted to app bundles started by
+    # their real path, so bin/obi is an exec script rather than a symlink.
+    system "scripts/bundle.sh", ".build/release/obi", prefix/"obi.app"
+    bin.write_exec_script prefix/"obi.app/Contents/MacOS/obi"
   end
 
   service do
-    run [opt_bin/"obi"]
+    run [opt_prefix/"obi.app/Contents/MacOS/obi"]
     keep_alive true
     process_type :interactive
     log_path var/"log/obi.log"
@@ -30,6 +33,9 @@ class Obi < Formula
       Point yabai signals at http://localhost:7776 (see the README), then:
         brew services start obi
       Config: ~/.config/obi/config.toml (theme = "pills" | "band" | "segmented").
+      The wifi widget needs Location access to read the network name (macOS 27.2+):
+        allow the prompt on first start, or enable obi in
+        System Settings → Privacy & Security → Location Services.
     EOS
   end
 
