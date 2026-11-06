@@ -34,7 +34,7 @@ class Obi < Formula
         brew services start obi
       Config: ~/.config/obi/config.toml (theme = "pills" | "band" | "segmented").
       The wifi widget needs Location access to read the network name (macOS 27.2+):
-        allow the prompt on first start, or enable obi in
+        allow the prompt on first start and after each upgrade, or enable obi in
         System Settings → Privacy & Security → Location Services.
     EOS
   end
