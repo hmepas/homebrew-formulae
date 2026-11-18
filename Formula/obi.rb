@@ -1,8 +1,8 @@
 class Obi < Formula
   desc "Native macOS status bar for yabai"
   homepage "https://github.com/hmepas/obi"
-  url "https://github.com/hmepas/obi/archive/refs/tags/v0.1.10.tar.gz"
-  sha256 "51ba4f2fcbca905af40cb0ddeaad1c8ad8c243fc4a69842b269272874f0fb473"
+  url "https://github.com/hmepas/obi/archive/refs/tags/v0.1.11.tar.gz"
+  sha256 "d5548ccb5f3de0b2f7eb48ef1b31d3fa912b9721dc607e162223f012300ecf3e"
 
   head "https://github.com/hmepas/obi.git", branch: "main"
 
