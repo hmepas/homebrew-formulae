@@ -1,8 +1,8 @@
 class Gozeks < Formula
   desc "Two-way sync of a local folder with an S3 bucket"
   homepage "https://github.com/hmepas/gozeks"
-  url "https://github.com/hmepas/gozeks/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "23e11414b2d7b1d2852774c8b02e8b9ebd5080ff48ee795ac58b0698979d2f6f"
+  url "https://github.com/hmepas/gozeks/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "c3d59cfe3c32d4ccd77f9fb8cc426253dd8446580fa7676bc2220b51efe66ceb"
 
   head "https://github.com/hmepas/gozeks.git", branch: "main"
 
