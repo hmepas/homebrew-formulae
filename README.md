@@ -11,6 +11,7 @@ Personal [Homebrew](https://brew.sh) tap for [hmepas](https://github.com/hmepas)
 brew tap hmepas/formulae
 brew install grappa
 brew install obi && brew services start obi
+brew install gozeks && brew services start gozeks
 ```
 
 Or install the latest development version straight from `main`:
